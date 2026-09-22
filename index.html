@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Interactive Full-Stack Development family tree roadmap." />
+  <title>Full-Stack Development Roadmap</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Full-Stack Development Journey</p>
+      <h1>S3 | Full-Stack Engineering Academy</h1>
+      <p class="subtitle">Learn → Practice → Build → Test → Deploy</p>
+    </div>
+    <div class="header-actions">
+      <div class="progress-box">
+        <span>Progress</span>
+        <strong id="progressText">0%</strong>
+        <div class="progress-track"><div id="progressBar"></div></div>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="Toggle theme">☾</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="roadmapView" class="view active">
+      <div class="toolbar">
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Search JavaScript, Angular, JWT, map(), Docker..." />
+          <button id="clearSearch" class="small-btn">Clear</button>
+        </div>
+        <button id="expandAll" class="secondary-btn">Expand all</button>
+      </div>
+
+      <div id="searchResults" class="search-results hidden"></div>
+
+      <div class="tree-scroll">
+        <div id="mainTree" class="family-tree"></div>
+      </div>
+
+      <div class="roadmap-footer">
+        <span>Click any technology to open its detailed learning family tree.</span>
+        <span>Progress is saved automatically in your browser.</span>
+      </div>
+    </section>
+
+    <section id="detailView" class="view">
+      <div class="detail-toolbar">
+        <button id="backButton" class="back-btn">← Back to Roadmap</button>
+        <div id="breadcrumb" class="breadcrumb"></div>
+      </div>
+
+      <div class="detail-layout">
+        <div class="detail-tree-panel">
+          <div class="detail-heading">
+            <div>
+              <p class="eyebrow">LEARNING MAP</p>
+              <h2 id="detailTitle"></h2>
+              <p id="detailSummary"></p>
+            </div>
+          </div>
+          <div id="detailTree" class="mini-family-tree"></div>
+        </div>
+
+        <aside id="topicPanel" class="topic-panel">
+          <div class="empty-topic">
+            <div class="empty-icon">↖</div>
+            <h3>Select a topic</h3>
+            <p>Select a node from the learning tree to see its explanation, example, exercise and interview questions.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Full-Stack Development • Interactive Learning Roadmap</span>
+    <span>HTML • CSS • JavaScript • TypeScript • Angular • Java • Spring Boot • PostgreSQL • DevOps</span>
+  </footer>
+
+  <script src="data/roadmap.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
