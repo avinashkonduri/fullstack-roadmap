@@ -1,87 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Interactive Full-Stack Development family tree roadmap." />
-  <title>Full-Stack Development Roadmap</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S3 | Full-Stack Development Roadmap</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="app-header">
-    <div>
-      <p class="eyebrow">Full-Stack Development Journey</p>
-      <h1>S3 | Full-Stack Engineering Academy</h1>
-      <p class="subtitle">Learn → Practice → Build → Test → Deploy</p>
-    </div>
-    <div class="header-actions">
-      <div class="progress-box">
-        <span>Progress</span>
-        <strong id="progressText">0%</strong>
-        <div class="progress-track"><div id="progressBar"></div></div>
-      </div>
-      <button id="themeToggle" class="icon-btn" title="Toggle theme">☾</button>
-    </div>
-  </header>
-
-  <main>
-    <section id="roadmapView" class="view active">
-      <div class="toolbar">
-        <div class="search-wrap">
-          <span>⌕</span>
-          <input id="searchInput" type="search" placeholder="Search JavaScript, Angular, JWT, map(), Docker..." />
-          <button id="clearSearch" class="small-btn">Clear</button>
-        </div>
-        <button id="expandAll" class="secondary-btn">Expand all</button>
-      </div>
-
-      <div id="searchResults" class="search-results hidden"></div>
-
-      <div class="tree-scroll">
-        <div id="mainTree" class="family-tree"></div>
-      </div>
-
-      <div class="roadmap-footer">
-        <span>Click any technology to open its detailed learning family tree.</span>
-        <span>Progress is saved automatically in your browser.</span>
-      </div>
-    </section>
-
-    <section id="detailView" class="view">
-      <div class="detail-toolbar">
-        <button id="backButton" class="back-btn">← Back to Roadmap</button>
-        <div id="breadcrumb" class="breadcrumb"></div>
-      </div>
-
-      <div class="detail-layout">
-        <div class="detail-tree-panel">
-          <div class="detail-heading">
-            <div>
-              <p class="eyebrow">LEARNING MAP</p>
-              <h2 id="detailTitle"></h2>
-              <p id="detailSummary"></p>
-            </div>
-          </div>
-          <div id="detailTree" class="mini-family-tree"></div>
-        </div>
-
-        <aside id="topicPanel" class="topic-panel">
-          <div class="empty-topic">
-            <div class="empty-icon">↖</div>
-            <h3>Select a topic</h3>
-            <p>Select a node from the learning tree to see its explanation, example, exercise and interview questions.</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <span>Full-Stack Development • Interactive Learning Roadmap</span>
-    <span>HTML • CSS • JavaScript • TypeScript • Angular • Java • Spring Boot • PostgreSQL • DevOps</span>
-  </footer>
-
-  <script src="data/roadmap.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+<header class="topbar">
+  <div><div class="brand">S3 DataCom <span>| Corporate Engineering Academy</span></div>
+  <h1>Full-Stack Development Roadmap</h1>
+  <p>Application-first curriculum</p></div>
+  <div class="actions"><div class="progress"><span>Progress</span><b id="pct">0%</b><i><em id="bar"></em></i></div><button id="theme">☾</button></div>
+</header>
+<main>
+<section id="home" class="screen">
+  <div class="intro"><div><small>LEARN → BUILD → SOLVE → TEST → DEPLOY</small><h2>Enterprise Trade & Reporting Portal</h2><p>The same application evolves from Angular + JSON to Node.js, PostgreSQL, Redis, system design, Docker, CI/CD and deployment.</p></div></div>
+  <div class="search"><span>⌕</span><input id="search" placeholder="Search Angular, Redis, Big O, CDN, VLAN, Docker..."><button id="clear">Clear</button></div>
+  <div id="results" class="results hidden"></div>
+  <div class="scroll"><div id="tree" class="tree"></div></div>
+</section>
+<section id="detail" class="screen">
+  <div class="nav"><button id="back">← Roadmap</button><span id="crumb"></span></div>
+  <div class="layout"><div class="panel"><small>DETAILED LEARNING TREE</small><h2 id="title"></h2><p id="summary"></p><div id="detailTree"></div></div><aside id="topic" class="topic"></aside></div>
+</section>
+</main>
+<footer><span>S3 DataCom | Full-Stack Development</span><span>Application → Architecture → Quality → Delivery</span></footer>
+<script src="data/roadmap.js"></script><script src="app.js"></script>
+</body></html>
